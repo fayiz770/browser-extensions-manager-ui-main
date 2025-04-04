@@ -1,4 +1,4 @@
-export default function Extention({icon, name, description, isActive, id}) {
+export default function Extention({icon, name, description, isActive}) {
     return(
         <div
             className="extention"

@@ -1,5 +1,5 @@
-import logo from '../../public/logo.svg'
-import themeToggle from '../../public/icon-moon.svg'
+import logo from '../assets/images/logo.svg'
+import themeToggle from '../assets/images/icon-moon.svg'
 export default function Header() {
     return(
         <header
@@ -10,11 +10,15 @@ export default function Header() {
                 src={logo}
                 alt="Logo"
             ></img>
-            <img
-                className="theme-toggle" 
-                src={themeToggle}
-                alt="Toggle theme" 
-            ></img>
+            <button>
+                <img
+                    className="theme-toggle" 
+                    src={themeToggle}
+                    alt="Toggle theme" 
+                ></img>
+
+            </button>
         </header>
     )
 }
+
