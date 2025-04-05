@@ -15,7 +15,9 @@ export default function Main() {
     return(
         <>
             <MainHeader />
-            {extentionList}
+            <div className="extention-list">
+                {extentionList}
+            </div>
         </>
     )
 }

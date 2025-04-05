@@ -4,11 +4,10 @@
     padding: 0;
 }
 
-#root {
+:root {
     --Neutral-900: hsl(227, 75%, 14%);
     --Neutral-800: hsl(226, 25%, 17%);
     --Neutral-700: hsl(225, 23%, 24%);
-    --Neutral-600: hsl(226, 11%, 37%);
     --Neutral-300: hsl(0, 0%, 78%);
     --Neutral-200: hsl(217, 61%, 90%);
     --Neutral-100: hsl(0, 0%, 93%);
@@ -16,12 +15,162 @@
     --Red-400: hsl(3, 86%, 64%);
     --Red-500: hsl(3, 71%, 56%);
     --Red-700: hsl(3, 77%, 44%);
-    --Light-Gradient: linear-gradient(180deg, #EBF2FC 0%, #EEF8F9 100%);
-    --Dark-Gradient-1: linear-gradient(180deg, #040918 0%, #091540 100%);
-    --Dark-Gradient-2: linear-gradient(180deg, #0A1B3D 0%, #0A1B3D 100%);
-    --Dark-Gradient-3: linear-gradient(180deg, #0A1B3D 0%, #0A1B3D 100%);
+    --Light: linear-gradient(180deg, #EBF2FC 0%, #EEF8F9 100%);
+    --Dark: linear-gradient(180deg, #040918 0%, #091540 100%);
+    --app-bg: var(--Light);
+    --app-color: black;
+    --header-bg: var(--Neutral-0);
+    --header-title-color: var(--Neutral-700);
+    --toggle-btn-bg: var(--Neutral-100);
+    --header-title-color: var(--Neutral-900);
+    --main-header-btn-bg: var(--Neutral-0);
+    --main-header-btn-color: var(--Neutral-900);
+    --extention-bg: var(--Neutral-0);
+    --extention-color: var(--Neutral-900);
 }
 
+.dark-theme {
+    --app-bg: var(--Dark);
+    --app-color: white;
+    --header-bg: var(--Neutral-800);
+    --header-title-color: var(--Neutral-0);
+    --toggle-btn-bg: var(--Neutral-700);
+    --header-title-color: var(--Neutral-0);
+    --main-header-btn-bg: var(--Neutral-700);
+    --main-header-btn-color: var(--Neutral-0);
+    --extention-bg: var(--Neutral-800);
+    --extention-color: var(--Neutral-0);
+}
+
+
 body {
-    
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 16px;
+}
+
+
+.app {
+    background: var(--app-bg);
+    color: var(--app-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    gap: 1rem;
+}
+
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    background: var(--header-bg);
+    padding: 1rem;
+    border-radius: 1rem;
+}
+
+
+.header-title {
+    color: var(--header-title-color);
+}
+
+
+.toggle-btn {
+    background: var(--toggle-btn-bg);
+    border: none;
+    border-radius: 1rem;
+    padding: 1rem;
+}
+
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+}
+
+
+.main-header {
+    padding: 1rem 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    width: 100%;
+}
+
+
+.main-header > h1 {
+    color: var(--header-title-color);
+    font-size: 2.125rem;
+    font-weight: bolder;
+}
+
+
+button {
+    border: .5px solid var(--Neutral-300);
+    border-radius: 5rem;
+    padding: .75rem 1.5rem;
+    font-family: 'Noto Sans', sans-serif;
+    background: var(--Neutral-0);
+    cursor: pointer;
+}
+
+
+.btns {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    width: 100%;
+}
+
+
+.btns > button {
+    background: var(--main-header-btn-bg);
+    color: var(--main-header-btn-color);
+}
+
+
+.extention-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    width: 100%;
+    padding: 1rem;
+}
+
+
+.extention {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    width: 100%;
+    padding: 1rem;
+    background: var(--extention-bg);
+    border-radius: 1rem;
+}
+
+
+.extention-info-container {
+    display: flex;
+    align-items: start;
+    gap: 1rem;
+}
+
+
+.extention-info {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    gap: 1rem;
 }
