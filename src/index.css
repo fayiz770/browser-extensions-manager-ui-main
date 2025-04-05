@@ -27,6 +27,7 @@
     --main-header-btn-color: var(--Neutral-900);
     --extention-bg: var(--Neutral-0);
     --extention-color: var(--Neutral-900);
+    --text-color: var(--Neutral-700);
 }
 
 .dark-theme {
@@ -40,6 +41,7 @@
     --main-header-btn-color: var(--Neutral-0);
     --extention-bg: var(--Neutral-800);
     --extention-color: var(--Neutral-0);
+    --text-color: var(--Neutral-100);
 }
 
 
@@ -72,8 +74,24 @@ body {
 }
 
 
-.header-title {
+.header-title, 
+.extention-info > h2,
+.remove-btn {
     color: var(--header-title-color);
+}
+
+.extention-info > p {
+    color: var(--text-color);
+}
+
+
+.remove-btn {
+    background: transparent;
+}
+
+
+.status-btn {
+    
 }
 
 
