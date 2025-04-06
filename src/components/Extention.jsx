@@ -16,7 +16,11 @@ export default function Extention({icon, name, description, isActive}) {
             </div>
             <div className="btns">
                 <button className="btn remove-btn">Remove</button>
-                <button className="btn status-btn">{isActive ? "Disable" : "Enable"}</button>
+                {   
+                    isActive ? 
+                    <button className="btn active"><div className="circle"></div></button> :
+                    <button className="btn inactive"><div className="circle"></div></button>
+                }
             </div>
         </div>
     )
