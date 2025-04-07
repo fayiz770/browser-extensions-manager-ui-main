@@ -28,7 +28,10 @@
     --extention-bg: var(--Neutral-0);
     --extention-color: var(--Neutral-900);
     --text-color: var(--Neutral-700);
-    --active-bg: var();
+    --active-bg: var(--Red-700);
+    --inactive-bg: var(--Neutral-300);
+    --selected-bg: var(--Red-700);
+    --selected-color: var(--Neutral-0);
 }
 
 .dark-theme {
@@ -43,6 +46,10 @@
     --extention-bg: var(--Neutral-800);
     --extention-color: var(--Neutral-0);
     --text-color: var(--Neutral-100);
+    --active-bg: var(--Red-400);
+    --inactive-bg: var(--Neutral-700);
+    --selected-bg: var(--Red-400);
+    --selected-color: var(--Neutral-900);
 }
 
 
@@ -91,34 +98,32 @@ body {
 }
 
 
-.status-btn {
-    
-}
-
-.active,
-.inactive {
+.status-toggle-btn {
+    border: none;
     display: flex;
     align-items: center;
-    padding: .5rem .125rem; 
-    width: 3rem;
+    padding: .5rem .25rem; 
+    width: 2.5rem;
     height: 1.5rem;
 }
 
 .active {
     justify-content: end;
+    background: var(--active-bg);
 }
 
 
 .inactive {
     justify-content: start;
+    background: var(--inactive-bg);
 }
 
 
 .circle {
     border-radius: 50%;
-    width: 1.5rem;
-    height: 1.5rem;
-    background: red;
+    width: 1.125rem;
+    height: 1.125rem;
+    background: var(--Neutral-0);
 }
 
 
@@ -159,9 +164,8 @@ body {
 button {
     border: .5px solid var(--Neutral-300);
     border-radius: 5rem;
-    padding: .75rem 1.5rem;
+    padding: .5rem 1rem;
     font-family: 'Noto Sans', sans-serif;
-    background: var(--Neutral-0);
     cursor: pointer;
 }
 
@@ -204,6 +208,13 @@ button {
     border-radius: 1rem;
 }
 
+.extention > div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
 
 .extention-info-container {
     display: flex;
@@ -218,4 +229,9 @@ button {
     align-items: start;
     justify-content: center;
     gap: 1rem;
+}
+
+.selected {
+    background: var(--selected-bg);
+    color: var(--selected-color);
 }

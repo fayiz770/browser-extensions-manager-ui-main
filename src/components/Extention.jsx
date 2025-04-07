@@ -1,4 +1,10 @@
-export default function Extention({icon, name, description, isActive}) {
+export default function Extention({icon, name, description, isActive, id}) {
+    function toggle(){
+        const btn = document.getElementById('I' + id)
+        btn.classList.contains('active') 
+            ? btn.classList.replace('active', 'inactive') 
+            : btn.classList.replace('inactive', 'active')
+    }
     return(
         <div
             className="extention"
@@ -14,13 +20,15 @@ export default function Extention({icon, name, description, isActive}) {
                     <p>{description}</p>
                 </div>
             </div>
-            <div className="btns">
+            <div>
                 <button className="btn remove-btn">Remove</button>
-                {   
-                    isActive ? 
-                    <button className="btn active"><div className="circle"></div></button> :
-                    <button className="btn inactive"><div className="circle"></div></button>
-                }
+                <button
+                    onClick={toggle}
+                    id={'I' + id} 
+                    className={`status-toggle-btn ${isActive ? 'active' : 'inactive'}`}
+                >
+                    <div className="circle"></div>
+                </button>
             </div>
         </div>
     )
