@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import Header from './components/Header'
 import Main from './components/Main'
+import data from '../data.json'
 function App() {
 
   const [darkMode, setDarkMode] = useState(false)
@@ -18,7 +19,9 @@ function App() {
         toggleDarkMode={toggleDarkMode}
         darkMode={darkMode} 
       />
-      <Main />
+      <Main
+        data={data} 
+      />
     </div>
   )
 }
