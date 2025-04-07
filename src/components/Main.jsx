@@ -1,7 +1,9 @@
+import React, { useState } from 'react'
 import MainHeader from './MainHeader.jsx'
 import Extention from './Extention.jsx'
-import data from '../data.json'
+import pureData from '../data.json'
 export default function Main({filteredData, setFilteredData}) {
+    const [data, setData] = useState(pureData)
     const filteredExtentions = data.filter(extention => {
         if (filteredData === 'active') {
             return extention.isActive
@@ -20,6 +22,8 @@ export default function Main({filteredData, setFilteredData}) {
             description={extention.description}
             isActive={extention.isActive}
             id={crypto.randomUUID()}
+            setData={setData}
+            data={data}
         /> 
     ))
     

@@ -1,10 +1,19 @@
-export default function Extention({icon, name, description, isActive, id}) {
+export default function Extention({icon, name, description, isActive, id, data, setData}) {
     function toggle(){
         const btn = document.getElementById('I' + id)
         btn.classList.contains('active') 
             ? btn.classList.replace('active', 'inactive') 
             : btn.classList.replace('inactive', 'active')
     }
+
+
+
+    function remove(){
+        console.log(id)
+        const newData = data.filter(extention => extention.id !== id)
+        setData(newData)
+    }
+
     return(
         <div
             className="extention"
@@ -21,7 +30,9 @@ export default function Extention({icon, name, description, isActive, id}) {
                 </div>
             </div>
             <div>
-                <button className="btn remove-btn">Remove</button>
+                <button
+                    onClick={remove} 
+                    className="btn remove-btn">Remove</button>
                 <button
                     onClick={toggle}
                     id={'I' + id} 
