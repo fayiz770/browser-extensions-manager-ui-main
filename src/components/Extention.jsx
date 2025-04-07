@@ -1,4 +1,4 @@
-export default function Extention({ isActive, id}) {
+export default function Extention({icon, name, description, isActive, id}) {
     function toggle(){
         const btn = document.getElementById('I' + id)
         btn.classList.contains('active') 
