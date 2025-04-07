@@ -1,21 +1,21 @@
-export default function MainHeader({ allExtentions, activeExtentions, inactiveExtentions }) {
+export default function MainHeader({ setFilteredData, selectedFilter }) {
     return(
         <div className="main-header">
             <h1>Extention Lists</h1>
             <div className="btns">
                 <button
-                    onClick={allExtentions}
-                    className="btn"
+                    onClick={() => setFilteredData('all')}
+                    className={`btn ${selectedFilter === 'all' ? 'selected' : ''}`}
                     id="all-btn"
                 >All</button>
                 <button
-                    onClick={activeExtentions} 
-                    className="btn"
+                    onClick={() => setFilteredData('active')} 
+                    className={`btn ${selectedFilter === 'active' ? 'selected' : ''}`}
                     id="active-btn"
                 >Active</button>
                 <button
-                    onClick={inactiveExtentions} 
-                    className="btn"
+                    onClick={() => setFilteredData('inactive')} 
+                    className={`btn ${selectedFilter === 'inactive' ? 'selected' : ''}`}
                     id="inactive-btn"
                 >Inactive</button>
             </div>

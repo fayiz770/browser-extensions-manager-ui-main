@@ -1,10 +1,10 @@
 import { useState } from 'react'
 import Header from './components/Header'
 import Main from './components/Main'
-import data from '../data.json'
 function App() {
 
   const [darkMode, setDarkMode] = useState(false)
+  const [filteredData, setFilteredData] = useState('all')
 
   const toggleDarkMode = () => {
     setDarkMode(!darkMode)
@@ -20,7 +20,8 @@ function App() {
         darkMode={darkMode} 
       />
       <Main
-        data={data} 
+        filteredData={filteredData}
+        setFilteredData={setFilteredData} 
       />
     </div>
   )

@@ -232,6 +232,6 @@ button {
 }
 
 .selected {
-    background: var(--selected-bg);
-    color: var(--selected-color);
+    background: var(--selected-bg) !important;
+    color: var(--selected-color) !important;
 }
