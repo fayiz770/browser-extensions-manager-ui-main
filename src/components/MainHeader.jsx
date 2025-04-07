@@ -5,13 +5,19 @@ export default function MainHeader({ allExtentions, activeExtentions, inactiveEx
             <div className="btns">
                 <button
                     onClick={allExtentions}
-                    className="btn">All</button>
+                    className="btn"
+                    id="all-btn"
+                >All</button>
                 <button
                     onClick={activeExtentions} 
-                    className="btn">Active</button>
+                    className="btn"
+                    id="active-btn"
+                >Active</button>
                 <button
                     onClick={inactiveExtentions} 
-                    className="btn">Inactive</button>
+                    className="btn"
+                    id="inactive-btn"
+                >Inactive</button>
             </div>
         </div>
     )

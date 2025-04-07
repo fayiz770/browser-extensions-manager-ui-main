@@ -13,21 +13,34 @@ export default function Main({data}) {
             id={crypto.randomUUID()}
         /> 
     ))
+    
+    const all = document.getElementById('all-btn')
+    const active = document.getElementById('active-btn')
+    const inactive = document.getElementById('inactive-btn')
 
-
+    console.log(all)
     function allExtentions() {
+        all.classList.add('selected')
+        active.classList.remove('selected')
+        inactive.classList.remove('selected')
         setFilteredData(data)
     }
 
 
     function activeExtentions() {
         const active = data.filter(extention => extention.isActive)
+        all.classList.remove('selected')
+        active.classList.add('selected')
+        inactive.classList.remove('selected')
         setFilteredData(active)
     }
 
 
     function inactiveExtentions() {
         const inactive = data.filter(extention => !extention.isActive)
+        all.classList.remove('selected')
+        active.classList.remove('selected')
+        inactive.classList.add('selected')
         setFilteredData(inactive)
     }
 
