@@ -9,8 +9,8 @@ export default function Extention({icon, name, description, isActive, id, data, 
 
 
     function remove(){
-        console.log(id)
         const newData = data.filter(extention => extention.id !== id)
+        console.log(newData)
         setData(newData)
     }
 
