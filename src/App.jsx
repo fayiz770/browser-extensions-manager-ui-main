@@ -23,6 +23,10 @@ function App() {
         filteredData={filteredData}
         setFilteredData={setFilteredData} 
       />
+      <footer>
+        chalenged by <a href="https://www.frontendmentor.com/">Frontend Mentor </a> solved by  
+        <a href="https://www.github.com/fayiz770"> Waris Fayiz</a>
+      </footer>
     </div>
   )
 }

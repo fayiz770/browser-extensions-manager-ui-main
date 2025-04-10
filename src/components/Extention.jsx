@@ -1,17 +1,28 @@
 export default function Extention({icon, name, description, isActive, id, data, setData}) {
     function toggle(){
+        isActive ? activate() : inactivate()
         const btn = document.getElementById('I' + id)
         btn.classList.contains('active') 
             ? btn.classList.replace('active', 'inactive') 
             : btn.classList.replace('inactive', 'active')
     }
-
-
-
     function remove(){
-        const newData = data.filter(extention => extention.id !== id)
-        console.log(newData)
+        const newData = data.filter(extention => extention.name !== name)
         setData(newData)
+    }
+
+    function activate() {
+        const newData = data.filter(extention => 
+            extention.name === name ? { ...extention, isActive: true } : extention
+        );
+        setData(newData);
+    }
+
+    function inactivate() {
+        const newData = data.filter(extention => 
+            extention.name === name ? { ...extention, isActive: false } : extention
+        );
+        setData(newData);
     }
 
     return(
