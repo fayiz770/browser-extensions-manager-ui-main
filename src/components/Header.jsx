@@ -1,6 +1,6 @@
-import logo from '../assets/images/logo.png'
-import moon from '../assets/images/icon-moon.svg'
-import sun from '../assets/images/icon-sun.svg'
+import logo from '../assets/logo.png'
+import moon from '../assets/icon-moon.svg'
+import sun from '../assets/icon-sun.svg'
 export default function Header({toggleDarkMode, darkMode}) {
     return(
         <header
