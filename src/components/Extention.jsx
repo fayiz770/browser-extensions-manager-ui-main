@@ -6,6 +6,8 @@ export default function Extention({icon, name, description, isActive, id, data, 
             ? btn.classList.replace('active', 'inactive') 
             : btn.classList.replace('inactive', 'active')
     }
+
+    console.log(icon)
     function remove(){
         const newData = data.filter(extention => extention.name !== name)
         setData(newData)

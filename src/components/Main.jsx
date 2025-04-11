@@ -13,7 +13,6 @@ export default function Main({filteredData, setFilteredData}) {
         return true
     })
 
-
     const extentionList = filteredExtentions.map((extention, index) => (
         <Extention
             key={index}
