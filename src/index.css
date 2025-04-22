@@ -171,6 +171,11 @@ button {
 }
 
 
+button:focuse {
+    outline: none;
+}
+
+
 .btns {
     display: flex;
     align-items: center;
